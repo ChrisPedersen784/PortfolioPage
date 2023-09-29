@@ -137,16 +137,19 @@
         <button class="btn btn-success" id="btn1">CONTACT ME </button>
       </div>
 
-      <script>
-        function modifyText(new_text) {
-          const btn1 = document.getElementById("btn1");
-          btn1.firstChild.nodeValue = new_text;
-        }
-        const modifyEmail = document.getElementById("Button");
-        modifyEmail.addEventListener("click", () => {
-          modifyText("@chrisadmin@gmail.com");
-        }, false);
-      </script>
+       <script>
+     const emailButton = document.getElementById("Button");
+     emailButton.addEventListener("click", () => {
+       // Specify the email address you want to pre-fill in the "To" field.
+       const toEmail = "chrisadmin@gmail.com";
+
+       // Create a mailto URL with the "to" parameter.
+       const mailtoUrl = `mailto:${toEmail}`;
+
+       // Open the user's default email client with the pre-filled "To" address.
+       window.location.href = mailtoUrl;
+     });
+   </script>
     </div>
   </div>
 
